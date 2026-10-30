@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FraudGuard | Digital Fraud Awareness & Detection Portal</title>
+  <meta name="description" content="Educational tools to screen suspicious emails, links, images, shopping prices, and certificates.">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="#"><span class="brand-mark">F</span> Fraud<span class="cyan">Guard</span></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav"><span class="navbar-toggler-icon"></span></button>
+    <div id="nav" class="collapse navbar-collapse">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#tools">Detection Tools</a></li>
+        <li class="nav-item"><a class="nav-link" href="#tips">Safety Tips</a></li>
+        <li class="nav-item"><a class="nav-link" href="#about">About Us</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<header id="home" class="hero">
+  <div class="hero-grid"></div>
+  <div class="container hero-content">
+    <div class="eyebrow"><span class="pulse"></span> DIGITAL SAFETY • SMARTER DECISIONS</div>
+    <h1>Think before you click.<br><span class="gradient-text">Verify before you trust.</span></h1>
+    <p class="hero-copy">Screen suspicious digital content, understand warning signs, and build safer online habits with FraudGuard.</p>
+    <a class="btn btn-neon btn-lg" href="#tools">Start Detection <span aria-hidden="true">→</span></a>
+    <div class="hero-note"><span>✓</span> Five screening tools <span>✓</span> Privacy-minded demo <span>✓</span> Awareness first</div>
+  </div>
+  <div class="orb orb-one"></div><div class="orb orb-two"></div>
+</header>
+
+<main>
+<section class="container section" id="tools">
+  <div class="section-heading">
+    <div class="eyebrow">YOUR FIRST LINE OF DEFENCE</div>
+    <h2>Detection <span class="cyan">Toolkit</span></h2>
+    <p>Choose a tool to screen content for potential warning signs.</p>
+  </div>
+  <div class="tool-grid">
+    <button class="tool-card" data-tool="email"><span class="tool-icon">✉</span><span class="tool-title">Email Fraud</span><span class="tool-desc">Review sender details, urgency, and suspicious requests.</span><span class="tool-action">Analyze email ↗</span></button>
+    <button class="tool-card" data-tool="url"><span class="tool-icon">⌁</span><span class="tool-title">Link / URL Check</span><span class="tool-desc">Inspect a URL's structure without opening it.</span><span class="tool-action">Check a link ↗</span></button>
+    <button class="tool-card" data-tool="image"><span class="tool-icon">▧</span><span class="tool-title">Image Screening</span><span class="tool-desc">Check file readability and available metadata.</span><span class="tool-action">Inspect image ↗</span></button>
+    <button class="tool-card" data-tool="price"><span class="tool-icon">₹</span><span class="tool-title">Shopping Price</span><span class="tool-desc">Compare a listed price with a reference price.</span><span class="tool-action">Compare price ↗</span></button>
+    <button class="tool-card" data-tool="certificate"><span class="tool-icon">▤</span><span class="tool-title">Certificate Check</span><span class="tool-desc">Review document details and verification needs.</span><span class="tool-action">Review certificate ↗</span></button>
+  </div>
+</section>
+
+<section class="container section detector-section" id="detector">
+  <div class="section-heading compact">
+    <div class="eyebrow">SECURE ANALYSIS WORKSPACE</div>
+    <h2 id="formTitle">Select a detection tool</h2>
+    <p id="formSubtitle">Choose one of the tools above to begin.</p>
+  </div>
+  <div class="accuracy-note" role="note"><strong>Know the limits:</strong> Results are cautious screening signals, not proof. FraudGuard does not query live threat databases or verify official records. Always confirm through a trusted source.</div>
+  <div class="detector-panel">
+    <div id="toolForm">
+      <div class="empty-state"><div class="shield">⬡</div><h3>Ready when you are</h3><p>Select Email, URL, Image, Shopping Price, or Certificate above.</p></div>
+    </div>
+    <div id="resultBox" class="result-box d-none" aria-live="polite"></div>
+  </div>
+</section>
+
+<section class="section tips-section" id="tips">
+  <div class="container">
+    <div class="section-heading"><div class="eyebrow">STAY ONE STEP AHEAD</div><h2>Everyday <span class="cyan">Safety Tips</span></h2><p>Small habits can prevent serious digital risks.</p></div>
+    <div class="tips-grid">
+      <article class="tip"><span>01</span><h3>Pause on urgency</h3><p>Scammers often pressure people to act quickly. Take time to verify.</p></article>
+      <article class="tip"><span>02</span><h3>Check the domain</h3><p>Look closely for misspellings and unexpected subdomains.</p></article>
+      <article class="tip"><span>03</span><h3>Protect private codes</h3><p>Never share passwords, PINs, or OTPs with callers or messages.</p></article>
+      <article class="tip"><span>04</span><h3>Verify at the source</h3><p>Contact banks, sellers, and certificate issuers using official channels.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="container section" id="about">
+  <div class="about-panel"><div><div class="eyebrow">ABOUT FRAUDGUARD</div><h2>Awareness is your <span class="cyan">strongest defence.</span></h2></div><p>FraudGuard is an educational prototype designed to demonstrate basic screening methods for suspicious digital content. It explains possible warning signs and encourages independent verification—not blind trust in automated results.</p></div>
+</section>
+
+<section class="container section" id="contact">
+  <div class="section-heading compact"><div class="eyebrow">HELP THE COMMUNITY</div><h2>Report a <span class="cyan">Suspicious Incident</span></h2><p>This demo validates your report locally and does not submit it to authorities.</p></div>
+  <form id="reportForm" class="form-card">
+    <label class="form-label" for="reportCategory">Category</label>
+    <select id="reportCategory" class="form-select mb-3"><option>Email</option><option>Link / URL</option><option>Image</option><option>Shopping Price</option><option>Certificate</option><option>Other</option></select>
+    <label class="form-label" for="reportDescription">What happened?</label>
+    <textarea id="reportDescription" class="form-control mb-3" rows="4" minlength="10" required placeholder="Describe the suspicious content. Do not include passwords or OTPs."></textarea>
+    <button class="btn btn-neon" type="submit">Validate Report</button><div id="reportResult" class="small mt-3"></div>
+  </form>
+</section>
+</main>
+
+<footer><div class="container footer-inner"><a class="navbar-brand fw-bold" href="#"><span class="brand-mark">F</span> Fraud<span class="cyan">Guard</span></a><p>Built for digital awareness and education.</p><small>Privacy: files are processed in memory and not saved by this demo. Disclaimer: automated screening is not proof of fraud or authenticity.</small><div class="footer-bottom">© 2026 FraudGuard • Stay alert. Stay secure.</div></div></footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
